@@ -1,14 +1,225 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+\documentclass[twoside,letterpaper,twocolumn]{article}
 
-\title{ViscoElasticCongressPaper}
-\author{Felipe Timóteo da Costa}
-\date{February 2020}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package with format specifications for the 16th CISBGf
+\usepackage{cisbgf19}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MANDATORY PARAMETERS
+
+% Setting the title
+\title{Latex Template for International Congress of the Brazilian Geophysical Society}
+
+% Setting the authors
+\author{Felipe Timóteo da Costa, Adelson Oliveira, Jurandyr Schmidt, Adelson Oliveira, Rodrigo Portugal,Hedison Kiuity Sato}
+
+% Setting the headings
+\headauthor{Costa, Felipe Timóteo}
+\headtitle{Latex Template}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 \maketitle
 
+\begin{abstract}
+
+Write the abstract after to finalize the article. The main orientations to writing a good abstract are:
+
+The Abstract is a summary of the study, with the primary emphasis on results and conclusions. Very briefly present the question(s) asked, the experimental design, a summary of observations, and list conclusions. Be very succinct - the abstract should be a single paragraph. It should stand on its own; therefore, do not refer to any other part of the report, such as a figure or table. Avoid long sections of introductory or explanatory material. As a summary of work done, it is written in past tense.
+
+\end{abstract}
+
 \section{Introduction}
 
+After to write the Results section, start to write the Introduction. The main orientations to writing a good introduction are:
+
+\begin{itemize}
+	\item Presentation of the problem or research question
+	\item Contextualize
+	\begin{itemize}
+		\item briefly review of the literature to help the reader
+		\item to mention the used research methodology 
+		\item scope of the study - contextualize the reader about the methods used
+	\end{itemize}
+	\item The purpose of the study
+	\begin{itemize}
+		\item explain the scope of the study
+		\item explain why some aspects was chosen and other not.
+		\item explain why the chosen theory was applied to the data.
+		\item avoid a detailed bibliography review
+		\item avoid a summary of results 
+	\end{itemize}
+	\item Establish the objective os the work
+\end{itemize}
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\linewidth]{images/logo_congress}
+		\label{fig:label1}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.45\linewidth]{images/logo_congress}
+		\label{fig:label2}
+	}
+	\caption{Example using figures side by side a) Figure on the left. b) Figure on the right. }
+	\label{fig:label3}
+\end{figure}
+
+
+\subsection{making a citation}
+
+First, you need a bibliography file. Google it to discover how to do it. Tips: The Mendeley program could provide a good solution.
+
+I save the file with the name references.bib in this folder.
+
+Example of indirect citation \citep{Yilmaz2000}.
+
+The book of professor \cite{Claerbout1984} is a good choice for who want to learn more about seismic processing and imaging. This was an example of the direct citation.
+
+
+
+\section{Materials and Methods}
+
+This section must be written at first. The main orientations to write a good Materials and Methods are:
+
+\begin{itemize}
+	\item Briefly describe the methods used
+	\item Cite references to the reader to find more information
+	\item Describe the new methods providing sufficient details to others researches can reproduce your experiment
+	\item Use subtitles to separate different methodologies
+	\item Describe what you did in the past
+\end{itemize}
+
+\subsection{Optional subsection}
+
+Bellow is an example of how to write an equation using the Latex's math ambient:
+
+\begin{equation}\label{waveequation}
+\frac{ 1}{  c^2(\mathbf{x})}\frac{\partial^2}{\partial t^2}p(\mathbf{x},t) - \nabla^2 p(\mathbf{x},t)  = w(\mathbf{x}_s,t),				
+\end{equation}
+
+\noindent
+or it possible to use the math symbols inside the text like the following example. The previous wave equation is the 2D wave equation, where $ c(\mathbf{x}) $ is the P wave velocity of the medium. 
+
+Example of an equation using 2 lines:
+
+\begin{eqnarray}\label{unconstrainedLagrangian}
+ \begin{array}{rl}
+\mathcal{L}(w,p,p^{\dagger}) = &\displaystyle \frac{1}{2}\int_{T} \| \mathbf{d}_{obs}(z_{rec},t) - \mathbf{d}_{cal}(z_{rec},t) \|^2 dt \\
+                               &\displaystyle - \int_{T}p^{\dagger}\left[ F\left(p(z,t)\right) - w(t) \right] dt ,
+\end{array}   
+\end{eqnarray}
+
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{images/logo_congress}
+	\label{fig:label4}	
+	\caption{Example using a simple figure}
+\end{figure}
+
+
+\section{Results}
+
+The second section that should be written is the result section. The main orientations to write a good results section:
+
+\begin{itemize}
+	\item The results must be presented in a logical sequence
+	\item Don't duplicate data among figures, tables, and text
+	\item Describe all parameters used in the experiments
+	\item Provide sufficient information to the other researchers can reproduce the experiment
+	\item Use subtitles to separate the different experiments
+	
+\end{itemize}
+
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\linewidth]{images/logo_congress}
+		\label{fig:label5}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.45\linewidth]{images/logo_congress}
+		\label{fig:label6}
+	}\\
+	\subfloat[]{
+		\includegraphics[width=0.45\linewidth]{images/logo_congress}
+		\label{fig:label7}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.45\linewidth]{images/logo_congress}
+		\label{fig:label8}
+	}
+	\caption{ Example using 4 figures at once. a) Above on the left b)Above on the right  c)Bellow on the left d) Bellow on the right.}
+	\label{fig:label9}
+\end{figure}
+
+
+An example of table
+
+\begin{table}[htb]
+	\caption{Descrição tabela.}
+	\label{tab:label1}
+	\begin{tabular}{|c|c|c|c|}
+		\hline 
+		\textbf{Methods} & \textbf{column 1} & \textbf{column 2} & \textbf{column 3} \\ 
+		\hline 
+		Seismological    &  &  &  \\ 
+		\hline 
+		Gravitational    &  &  &  \\ 
+		\hline 
+		Electric         &  &  &  \\ 
+		\hline 
+		Magnetic         &  &  &  \\ 
+		\hline 
+		Electromagnetic  &  &  &  \\ 
+		\hline 
+		Thermal          &  &  &  \\ 
+		\hline 
+	\end{tabular} 
+\end{table}
+
+
+\section*{Discussion and Conclusion}
+
+After to write the introduction, start to write the discussion and conclusion section. You could separate it in two or not. The main orientation are:
+
+\begin{itemize}
+	\item Briefly describe the limitation of the study showing the you considered the weakness of your experiments
+	\item Discuss the conclusion from most important to less important
+	\item Highlight the most important findings in a few words
+	\item Relate the results with the hypothesis
+	\item  Identify methodological proceedings with relevant results
+	\item If your finding are preliminaries, suggest new experiments
+	
+\end{itemize}
+
+\bibliography{references}
+
+%%% Uncomment if you don't have references bib file
+%\section{References}
+
+%Barsh, R. (2009) Web-based technology for storage and pro- cessing of multi-component data in seismology. First steps towards a new design, PhD thesis, Ludwig Maximilians Universitat Munchen, Munich, Germany, 126 pp.
+%
+%Percivall, G. (2010). The application of open standards to en- hance the interoperability of geoscience information, In- ternational Journal of Digital Earth, 3 (S1), 14-30.
+%
+%Pirchiner, M ; Collaço, B. B. ; Calhau, J. ; Assumpção, M. S. ; Dourado, J. C. . BRAzilian Seismographic Integrated Systems (BRASIS): infrastructure and data management. Annals of Geophysics, v. 54, p. 17-22, 2011.
+%
+%Schorlemmer, D., A. Wyss, S. Maraini, S. Wiemer and M. Baer (2004). QuakeML - an XML schema for seismology, ORFEUS Newsletter, 6 (2); http://www.orfeus-eu.org/Organiza- tion/Newsletter/vol6no2/quakeml.shtml (last accessed 7 March 2011).
+%
+%SEED Manual (2010). SEED Reference Manual, SEED Format Version 2.4, May 2010, IRIS, 212 pp.; 
+%
+%SeisComP3.org (2011). SeisComP 3 documentation; www.seiscomp3.org/wiki/doc (last accessed 20 April 2013).
+
+\section{Acknowledgments}
+
+\lipsum[11]
+
 \end{document}
+
+
